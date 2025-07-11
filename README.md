@@ -20,6 +20,9 @@ El dataset MXMH explora la relación entre las preferencias musicales de los ind
 
 El código realiza una limpieza y transformación de datos que incluye la conversión de variables categóricas a numéricas, como por ejemplo transformar la variable "While working" de respuestas Sí/No a valores binarios 1/0. También elimina los valores nulos presentes en la columna 'Age' y mapea las frecuencias musicales categóricas ("Never", "Rarely", "Sometimes", "Very frequently") a valores numéricos del 0 al 3. Se eliminan además las columnas consideradas irrelevantes para el análisis. En la etapa de análisis visual, el código genera histogramas de variables numéricas clave como 'Age', 'Hours per day', 'Anxiety', entre otras, para observar sus distribuciones. Finalmente, se prepara un subconjunto de datos centrado en variables relacionadas con música y salud mental, identificando aquellas que serán útiles para un análisis posterior o para construir modelos predictivos.
 
+## Clasificación K-Nearest Neighbors
+
+De forma preliminar se utilizó un modelo K-Nearest Neighbors (KNN) combinado con una reducción de dimensionalidad mediante PCA a un solo componente. Sin embargo, este enfoque no se ajustó adecuadamente a los datos, ya que los resultados obtenidos fueron insatisfactorios y el modelo no logró realizar predicciones precisas. Debido a estas limitaciones, se decidió descartar este método para continuar explorando otras técnicas más adecuadas para el problema.
 
 ## Clasificación con Random Forest
 
