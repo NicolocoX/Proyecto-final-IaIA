@@ -52,4 +52,13 @@ Se utilizará Random Forest para clasificar la salud mental de los individuos a 
 
 ## Resultados obtenidos
 
+Los resultados obtenidos durante el desarrollo del modelo no fueron satisfactorios. Inicialmente, se utilizó un modelo K-Nearest Neighbors (KNN), el cual presentó un buen rendimiento en el conjunto de entrenamiento (R² = 0.496), pero un rendimiento muy bajo en el conjunto de prueba (R² = -0.347). Esto indica un claro sobreajuste, ya que el modelo aprende bien los datos de entrenamiento pero no generaliza correctamente a datos nuevos.
+
+Se intentó mejorar este modelo aplicando GridSearchCV para ajustar los hiperparámetros. Si bien se logró reducir el sobreajuste, el rendimiento general siguió siendo pobre (Entrenamiento R² = 0.224, Test R² = -0.018), lo que sugiere que el modelo no estaba captando patrones relevantes en los datos.
+
+Debido a estos resultados, se optó por probar con un modelo de Random Forest, que arrojó un rendimiento ligeramente mejor: Entrenamiento R² = 0.241 y Test R² = 0.027. Sin embargo, este desempeño seguía siendo bajo, por lo que se aplicó nuevamente GridSearch para optimizar sus parámetros. El resultado final fue un R² de entrenamiento de 0.333 y un R² de test de apenas 0.005, lo que sigue indicando una capacidad predictiva muy limitada.
+
 ## Conclusiones
+
+A partir de estos resultados, se concluye que la frecuencia con la que una persona escucha ciertos géneros musicales no constituye un buen predictor para identificar posibles problemas de salud mental en este conjunto de datos. Esto se debe, en parte, a que el estado emocional y mental de una persona es altamente subjetivo y multifactorial, influenciado por contextos personales, sociales, biológicos y psicológicos que no están reflejados en la base de datos utilizada. 
+
